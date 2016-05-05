@@ -1,4 +1,25 @@
-p {
-  color: red; }
+html, body, li, ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+.body-container .front-head {
+  height: 60px;
+  background: #24C1EF; }
+  .body-container .front-head .btn {
+    padding-top: 20px;
+    margin: 0 auto;
+    width: 120px; }
+    .body-container .front-head .btn li {
+      display: inline-block;
+      width: 50px;
+      height: 26px;
+      background: white;
+      border-radius: 20px;
+      line-height: 26px;
+      text-align: center;
+      margin-left: 5px; }
 
 /*# sourceMappingURL=YLnovel.css.map */

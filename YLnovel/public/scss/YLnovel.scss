@@ -1,3 +1,31 @@
-p{
-  color: red;
+$main-color:#24C1EF;
+html, body ,li ,ul{
+  margin:0;
+  padding:0;
+}
+li{
+  list-style: none;
+}
+.body-container{
+  .front-head{
+    height: 60px;
+    background: $main-color;
+    .btn{
+      padding-top:20px;
+      margin:0 auto;
+      width: 120px;
+      li{
+        display: inline-block;
+        width: 50px;
+        height: 26px;
+        background: white;
+        border-radius: 20px;
+        line-height: 26px;
+        text-align: center;
+        margin-left: 5px;
+      }
+    }
+  }
+
+
 }
