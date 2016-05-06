@@ -1,25 +1,104 @@
 html, body, li, ul {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%; }
 
 li {
   list-style: none; }
 
 .body-container .front-head {
-  height: 60px;
+  height: 50px;
   background: #24C1EF; }
-  .body-container .front-head .btn {
-    padding-top: 20px;
+  .body-container .front-head .title {
+    padding-top: 15px;
     margin: 0 auto;
-    width: 120px; }
-    .body-container .front-head .btn li {
-      display: inline-block;
-      width: 50px;
-      height: 26px;
-      background: white;
-      border-radius: 20px;
-      line-height: 26px;
+    width: 50px;
+    color: #ffffff;
+    letter-spacing: 5px;
+    padding-left: 6px;
+    font-weight: 600; }
+  .body-container .front-head .search {
+    float: right;
+    margin-top: -25px;
+    margin-right: 15px; }
+    .body-container .front-head .search img {
+      width: 26px; }
+.body-container .story-container .story {
+  border-bottom: 7px solid #E6E6E6; }
+  .body-container .story-container .story .info-bar {
+    height: 45px; }
+    .body-container .story-container .story .info-bar .category-label {
+      float: left;
+      width: 45px;
+      height: 21px;
+      border-radius: 35px;
+      color: #ffffff;
       text-align: center;
-      margin-left: 5px; }
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 600;
+      margin-left: 10px; }
+      .body-container .story-container .story .info-bar .category-label.label-science {
+        margin-top: 11px;
+        background: #96D6B6; }
+    .body-container .story-container .story .info-bar .title {
+      float: left;
+      margin-top: 9px;
+      margin-left: 10px;
+      width: 200px;
+      color: #5D5D5F;
+      font-size: 17px;
+      font-weight: 500;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .body-container .story-container .story .info-bar .author {
+      float: right;
+      margin-top: 10px;
+      width: 110px; }
+      .body-container .story-container .story .info-bar .author img {
+        width: 25px;
+        height: 25px; }
+      .body-container .story-container .story .info-bar .author label {
+        position: relative;
+        top: -5px;
+        display: inline-block;
+        margin-left: 5px;
+        width: 75px;
+        color: #959595;
+        font-size: 14px;
+        overflow: hidden; }
+  .body-container .story-container .story .content {
+    height: 200px; }
+    .body-container .story-container .story .content img {
+      height: 200px;
+      width: 100%; }
+  .body-container .story-container .story .sub-info-bar {
+    height: 40px;
+    width: 100%;
+    line-height: 40px; }
+    .body-container .story-container .story .sub-info-bar .sub-title {
+      float: left;
+      width: 56%;
+      margin-left: 2%; }
+    .body-container .story-container .story .sub-info-bar .comments {
+      float: left;
+      width: 42%;
+      color: #959595; }
+      .body-container .story-container .story .sub-info-bar .comments span {
+        float: left;
+        display: inline-block;
+        margin-top: 2px; }
+        .body-container .story-container .story .sub-info-bar .comments span.comments {
+          margin-left: 5px; }
+      .body-container .story-container .story .sub-info-bar .comments img {
+        width: 20px; }
+      .body-container .story-container .story .sub-info-bar .comments label {
+        margin-left: 5px; }
+      .body-container .story-container .story .sub-info-bar .comments label.num {
+        position: relative;
+        top: -3px;
+        display: inline-block;
+        margin-left: 4px; }
 
 /*# sourceMappingURL=YLnovel.css.map */

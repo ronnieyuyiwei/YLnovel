@@ -3,32 +3,52 @@ extends layout
 block content
   .body-container
     .front-head
-      .btn
-        li 关注
-        li 更新
+      .title 首页
+
       .search
-        xxx
-    .category-bar
-      li 历史
-      li 科幻
-      li 冒险
-      li 武侠
-      li 言情
-      li 历史
-      li 历史
-      li 科幻
-      li 冒险
-      li 武侠
-      li 言情
-      li 历史
+        img(src="/images/icons/search.png")
+
     .story-container
       .story
         .info-bar
-          .category-label
-          .title
+          .category-label.label-science 科幻
+          .title 最终进化
           .author
+            img(src="/images/icons/author.png")
+            label 木子木子
         .content
+            img(src="/images/photos/science.jpg")
         .sub-info-bar
-          .sub-title
+          .sub-title 现实主义的虚空
           .comments
+              span.zan
+                 label
+                  img(src="/images/icons/zan.png")
+                 label.num 12345
+              span.comments
+                 label
+                  img(src="/images/icons/comments.png")
+                 label.num 3456
+      .story
+          .info-bar
+              .category-label.label-science 科幻
+              .title 最终进化
+              .author
+                  img(src="/images/icons/author.png")
+                  label 木子木子
+          .content
+              img(src="/images/photos/science.jpg")
+          .sub-info-bar
+              .sub-title 现实主义的虚空
+              .comments
+                  span.zan
+                      label
+                          img(src="/images/icons/zan.png")
+                      label.num 12345
+                  span.comments
+                      label
+                          img(src="/images/icons/comments.png")
+                      label.num 3456
+
+
 

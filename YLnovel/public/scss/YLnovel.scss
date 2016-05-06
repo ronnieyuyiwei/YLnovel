@@ -1,28 +1,142 @@
 $main-color:#24C1EF;
+$gray:#E6E6E6;
+$light-gray:#959595;
+$font-color:#5D5D5F;
 html, body ,li ,ul{
   margin:0;
   padding:0;
+  overflow-x: hidden;
+  height:100%;
 }
+
 li{
   list-style: none;
 }
 .body-container{
   .front-head{
-    height: 60px;
+    height: 50px;
     background: $main-color;
-    .btn{
-      padding-top:20px;
+    .title{
+      padding-top:15px;
       margin:0 auto;
-      width: 120px;
-      li{
-        display: inline-block;
-        width: 50px;
-        height: 26px;
-        background: white;
-        border-radius: 20px;
-        line-height: 26px;
-        text-align: center;
-        margin-left: 5px;
+      width: 50px;
+      color: #ffffff;
+      letter-spacing: 5px;
+      padding-left: 6px;
+      font-weight: 600;
+
+    }
+    .search{
+      float: right;
+      margin-top: -25px;
+      margin-right:15px;
+      img{
+        width: 26px;
+      }
+    }
+  }
+  .category-bar{
+
+
+  }
+  .story-container{
+    .story{
+      border-bottom: 7px solid $gray;
+      .info-bar{
+        height: 45px;
+        .category-label{
+          float: left;
+          width: 45px;
+          height: 21px;
+          border-radius: 35px;
+          color: #ffffff;
+          text-align: center;
+          font-size: 14px;
+          line-height: 21px;
+          font-weight: 600;
+          margin-left: 10px;
+          //此处对不同分类应该有不同的标签颜色
+          &.label-science{     //科幻
+            margin-top: 11px;
+            background: #96D6B6;
+          }
+        }
+        .title{
+          float: left;
+          margin-top: 9px;
+          margin-left: 10px;
+          width: 200px;
+          color:$font-color;
+          font-size: 17px;
+          font-weight:500;
+          overflow: hidden;
+          text-overflow:ellipsis;
+        }
+        .author{
+          float: right;
+          margin-top: 10px;
+          width: 110px;
+
+          img{
+            width: 25px;
+            height: 25px;
+          }
+          label{
+            position: relative;
+            top: -5px;
+            display: inline-block;
+            margin-left: 5px;
+            width: 75px;
+            color: $light-gray;
+            font-size: 14px;
+            overflow: hidden;
+
+          }
+        }
+      }
+      .content{
+        height: 200px;
+        img{
+          height: 200px;
+          width: 100%;
+        }
+      }
+      .sub-info-bar{
+        height: 40px;
+        width:100%;
+        line-height: 40px;
+        .sub-title{
+          float: left;
+          width:56%;
+          margin-left: 2%;
+
+        }
+       .comments{
+         float: left;
+         width: 42%;
+         color: $light-gray;
+         span{
+           float: left;
+           display: inline-block;
+           margin-top: 2px;
+           &.comments{
+             margin-left: 5px;
+           }
+         }
+          img{
+            width: 20px;
+          }
+         label{
+           margin-left: 5px;
+         }
+         label.num{
+           position: relative;
+           top: -3px;
+           display: inline-block;
+           margin-left: 4px;
+         }
+
+        }
       }
     }
   }
