@@ -5,8 +5,10 @@ html
     link(rel='stylesheet', href='/stylesheets/YLnovel.css')
     meta(charset = "utf-8")
     meta(name="viewport",content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no")
-    script(src="/javascripts/iscroll.js")
     meta(name="apple-mobile-web-app-capable",content="yes")
-    script(src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js")
+    block script
+      script(src="/javascripts/iscroll.js")
+      script(src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js")
   body
     block content
+    block pagescript

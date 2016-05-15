@@ -1,0 +1,36 @@
+//
+   Created by Yu Yiwei on 2016/5/15.
+extends includes/layout
+block append pagescript
+    script.
+        var h = document.body.clientHeight;
+        var funHeight = h - 190;//180高度 10padding
+        $(function(){
+            $(".function").css("height",funHeight);
+        })
+
+block content
+    .login-panel
+        .login-btn
+            img(src="/images/icons/login.png")
+        .label 登录
+    .function
+        .my-message
+            img.icon(src="/images/icons/message.png")
+            label 我的消息
+            img.arrow(src="/images/icons/right.png")
+        .my-works
+            img.icon(src="/images/icons/works.png")
+            label 我的作品
+            img.arrow(src="/images/icons/right.png")
+        .my-focus
+            img.icon(src="/images/icons/focus.png")
+            label 我的关注
+            img.arrow(src="/images/icons/right.png")
+        .my-settings
+            img.icon(src="/images/icons/settings.png")
+            label 我的设置
+            img.arrow(src="/images/icons/right.png")
+    include includes/bottom-menu
+
+

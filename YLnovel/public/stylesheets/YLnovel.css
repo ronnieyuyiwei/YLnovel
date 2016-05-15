@@ -51,7 +51,7 @@ li {
           background: #96D6B6; }
       .body-container .story-container .story .info-bar .title {
         float: left;
-        margin-top: 10px;
+        margin-top: 11px;
         margin-left: 10px;
         width: 180px;
         color: #5D5D5F;
@@ -86,11 +86,11 @@ li {
       line-height: 40px; }
       .body-container .story-container .story .sub-info-bar .sub-title {
         float: left;
-        width: 56%;
+        width: 53%;
         margin-left: 2%; }
       .body-container .story-container .story .sub-info-bar .comments {
         float: right;
-        width: 42%;
+        width: 45%;
         color: #959595;
         text-align: center; }
         .body-container .story-container .story .sub-info-bar .comments span {
@@ -109,23 +109,74 @@ li {
           top: -3px;
           display: inline-block;
           margin-left: 4px; }
-.body-container .bottom-bar {
+
+.bottom-bar {
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 48px;
   background: #ffffff;
   border-top: 1px solid #E6E6E6; }
-  .body-container .bottom-bar .section {
+  .bottom-bar .section {
     margin-top: 4px;
     float: left;
     width: 33%;
     text-align: center; }
-    .body-container .bottom-bar .section label {
+    .bottom-bar .section label {
       display: block;
       font-size: 12px;
-      color: #959595; }
-      .body-container .bottom-bar .section label img {
+      color: #5D5D5F; }
+      .bottom-bar .section label img {
         width: 22px; }
+
+.login-panel {
+  height: 180px;
+  background: #24C1EF; }
+  .login-panel .login-btn {
+    position: relative;
+    top: 45px;
+    text-align: center; }
+    .login-panel .login-btn img {
+      width: 65px;
+      padding: 5px;
+      border: 3px solid #ffffff;
+      border-radius: 1000px;
+      background: #ffffff; }
+  .login-panel .label {
+    position: relative;
+    top: 50px;
+    text-align: center; }
+
+.function {
+  background: #F0F0F0;
+  padding-top: 10px; }
+  .function img.icon {
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 25px; }
+  .function img.arrow {
+    float: right;
+    margin-right: 12px;
+    margin-top: 5px; }
+  .function .my-message {
+    height: 40px;
+    background: #ffffff; }
+  .function .my-works {
+    margin-top: 10px;
+    height: 40px;
+    background: #ffffff; }
+  .function .my-focus {
+    height: 40px;
+    margin-top: 10px;
+    background: #ffffff; }
+  .function .my-settings {
+    margin-top: 10px;
+    height: 40px;
+    background: #ffffff; }
+  .function label {
+    display: inline-block;
+    margin-left: 15px;
+    position: relative;
+    top: -7px; }
 
 /*# sourceMappingURL=YLnovel.css.map */

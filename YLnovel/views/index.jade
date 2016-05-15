@@ -1,4 +1,4 @@
-extends layout
+extends includes/layout
 
 block content
   .body-container
@@ -49,40 +49,29 @@ block content
                       label
                           img(src="/images/icons/zan.png")
                       label.num 12345
-        .story
-            .info-bar
-                .category-label.label-science 科幻
-                .title 最终进化
-                .author
-                    img(src="/images/icons/author.png")
-                    label 木子木子
-            .content
-                img(src="/images/photos/science.jpg")
-            .sub-info-bar
-                .sub-title 现实主义的虚空
-                .comments
-                    span.comments
-                        label
-                            img(src="/images/icons/comments.png")
-                        label.num 3456
-                    span.zan
-                        label
-                            img(src="/images/icons/zan.png")
-                        label.num 12345
+      .story
+          .info-bar
+              .category-label.label-science 科幻
+              .title 最终进化
+              .author
+                  img(src="/images/icons/author.png")
+                  label 木子木子
+          .content
+              img(src="/images/photos/science.jpg")
+          .sub-info-bar
+              .sub-title 现实主义的虚空
+              .comments
+                  span.comments
+                      label
+                          img(src="/images/icons/comments.png")
+                      label.num 3456
+                  span.zan
+                      label
+                          img(src="/images/icons/zan.png")
+                      label.num 12345
 
-    .bottom-bar
-        .section
-            label
-                img(src="/images/icons/frontpage.png")
-            label 首页
-        .section
-            label
-                img(src="/images/icons/focus.png")
-            label 关注
-        .section
-            label
-                img(src="/images/icons/me.png")
-            label 我的
+
+    include includes/bottom-menu
             
 
 
