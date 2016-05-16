@@ -9,7 +9,9 @@ html, body ,li ,ul{
   overflow-x: hidden;
   height:100%;
 }
-
+a{
+  text-decoration: none;
+}
 li{
   list-style: none;
 }
@@ -237,5 +239,24 @@ li{
     margin-left: 15px;
     position: relative;
     top: -7px;
+  }
+}
+
+.login-container{
+  background: $bg-color;
+  .login-input{
+    input{
+      display: block;
+      width:100%;
+      height: 40px;
+      border: none;
+      background: #ffffff;
+      padding-left: 15px;
+      font-size: 14px;
+      &:last-child{
+        margin-top: 10px;
+      }
+
+    }
   }
 }

@@ -1,0 +1,17 @@
+//
+   Created by Yu Yiwei on 2016/5/16.
+extends includes/layout
+
+block append pagescript
+    script.
+        var h = document.body.clientHeight;
+        $(function(){
+            $(".login-container").css("height",h);
+        })
+
+block content
+    .login-container
+        .login-input
+            input.id(type="text",name="id",placeholder="手机号")
+            input.passowrd(type="password",name="password",placeholder="密码")
+
