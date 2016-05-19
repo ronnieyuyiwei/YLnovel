@@ -244,6 +244,19 @@ li{
 
 .login-container{
   background: $bg-color;
+  .login-head{
+    padding-top: 10px;
+    height: 30px;
+    img{
+      margin-left: 10px;
+      height: 25px;
+    }
+    label{
+      float: right;
+      margin-right: 25px;
+      color: $light-gray;
+    }
+  }
   .login-input{
     input{
       display: block;
@@ -254,9 +267,82 @@ li{
       padding-left: 15px;
       font-size: 14px;
       &:last-child{
-        margin-top: 10px;
+        margin-top: 5px;
       }
 
     }
+  }
+  .login-btn{
+    width: 90%;
+    height: 45px;
+    background: $main-color;
+    margin: 20px auto 0 auto;
+    border-radius: 5px;
+    text-align: center;
+    line-height:45px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight:600;
+  }
+  .login-regist{
+    width: 65px;
+    margin:25px auto 0 auto;
+  }
+}
+.register-container{
+  background: $bg-color;
+  .register-head{
+    padding-top: 10px;
+    height: 30px;
+  }
+  .register-input{
+    .cell,.password{
+      width:100%;
+      height: 40px;
+      border: none;
+      background: #ffffff;
+      padding-left: 15px;
+      font-size: 14px;
+    }
+    .cell{
+      margin-top: 10px;
+    }
+    .password{
+      margin-top: 5px;
+    }
+    .verity{
+      display: inline-block;
+      width: 50%;
+      height: 40px;
+      border:none;
+      margin-top: 5px;
+      padding-left: 15px;
+      font-size: 14px;
+
+    }
+    .verity-code{
+      display: inline-block;
+      width:40%;
+      height: 45px;
+      background: #12B489;
+      border-radius: 5px;
+      margin-left: 10px;
+      text-align: center;
+      line-height: 45px;
+      font-size: 14px;
+      color: #ffffff;
+    }
+  }
+  .register-btn{
+    width: 90%;
+    height: 43px;
+    background: $main-color;
+    margin: 20px auto 0 auto;
+    border-radius: 5px;
+    text-align: center;
+    line-height:43px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight:600;
   }
 }

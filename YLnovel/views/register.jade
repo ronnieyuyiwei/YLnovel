@@ -1,0 +1,18 @@
+//Created by Yu Yiwei on 2016/5/17.
+extends includes/layout
+block append pagescript
+    script.
+        var h = document.body.clientHeight;
+        $(function(){
+            $(".register-container").css("height",h);
+        })
+block content
+    .register-container
+        .register-head
+            img(src="/images/icons/back.png")
+        .register-input
+            input.cell(type="text",placeholder="请输入手机号")
+            input.password(type="password",placeholder="请输入密码")
+            input.verity(type="text",placeholder="验证码")
+            .verity-code 获取验证码
+        .register-btn 立即注册

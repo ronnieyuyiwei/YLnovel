@@ -29,7 +29,11 @@ app.get('/mypage', function (req, res) {
   )
 });
 app.get('/login', function (req, res) {
-  res.render('login', {}
+  res.render('login', { title:"登录"}
+  )
+});
+app.get('/register', function (req, res) {
+  res.render('register', { title:"注册"}
   )
 });
 // catch 404 and forward to error handler

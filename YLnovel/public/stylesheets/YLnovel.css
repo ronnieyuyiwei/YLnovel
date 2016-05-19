@@ -184,6 +184,16 @@ li {
 
 .login-container {
   background: #F0F0F0; }
+  .login-container .login-head {
+    padding-top: 10px;
+    height: 30px; }
+    .login-container .login-head img {
+      margin-left: 10px;
+      height: 25px; }
+    .login-container .login-head label {
+      float: right;
+      margin-right: 25px;
+      color: #959595; }
   .login-container .login-input input {
     display: block;
     width: 100%;
@@ -193,6 +203,67 @@ li {
     padding-left: 15px;
     font-size: 14px; }
     .login-container .login-input input:last-child {
-      margin-top: 10px; }
+      margin-top: 5px; }
+  .login-container .login-btn {
+    width: 90%;
+    height: 45px;
+    background: #24C1EF;
+    margin: 20px auto 0 auto;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600; }
+  .login-container .login-regist {
+    width: 65px;
+    margin: 25px auto 0 auto; }
+
+.register-container {
+  background: #F0F0F0; }
+  .register-container .register-head {
+    padding-top: 10px;
+    height: 30px; }
+  .register-container .register-input .cell, .register-container .register-input .password {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: #ffffff;
+    padding-left: 15px;
+    font-size: 14px; }
+  .register-container .register-input .cell {
+    margin-top: 10px; }
+  .register-container .register-input .password {
+    margin-top: 5px; }
+  .register-container .register-input .verity {
+    display: inline-block;
+    width: 50%;
+    height: 40px;
+    border: none;
+    margin-top: 5px;
+    padding-left: 15px;
+    font-size: 14px; }
+  .register-container .register-input .verity-code {
+    display: inline-block;
+    width: 40%;
+    height: 45px;
+    background: #12B489;
+    border-radius: 5px;
+    margin-left: 10px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 14px;
+    color: #ffffff; }
+  .register-container .register-btn {
+    width: 90%;
+    height: 43px;
+    background: #24C1EF;
+    margin: 20px auto 0 auto;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 43px;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600; }
 
 /*# sourceMappingURL=YLnovel.css.map */
