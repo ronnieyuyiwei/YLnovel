@@ -22,10 +22,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //app.use('/', routes);
 app.get('/', function (req, res) {
-  res.render('index',{})
+  res.render('index',{title:"露珠小说"})
 });
 app.get('/mypage', function (req, res) {
-  res.render('mypage', {}
+  res.render('mypage', {title:"我的"}
   )
 });
 app.get('/login', function (req, res) {

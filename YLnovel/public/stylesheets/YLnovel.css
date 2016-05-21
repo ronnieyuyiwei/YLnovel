@@ -5,6 +5,7 @@ html, body, li, ul {
   height: 100%; }
 
 a {
+  color: #5D5D5F;
   text-decoration: none; }
 
 li {
@@ -32,6 +33,22 @@ li {
     margin-right: 15px; }
     .body-container .front-head .search img {
       width: 26px; }
+.body-container .classify {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  height: 120px; }
+  .body-container .classify a {
+    width: 25%;
+    float: left;
+    margin-top: 10px; }
+    .body-container .classify a img {
+      width: 30px;
+      display: inline-block; }
+    .body-container .classify a label {
+      color: #5D5D5F;
+      display: block; }
 .body-container .story-container {
   margin-bottom: 40px; }
   .body-container .story-container .story {
@@ -246,12 +263,12 @@ li {
   .register-container .register-input .verity-code {
     display: inline-block;
     width: 40%;
-    height: 45px;
+    height: 43px;
     background: #12B489;
     border-radius: 5px;
     margin-left: 10px;
     text-align: center;
-    line-height: 45px;
+    line-height: 43px;
     font-size: 14px;
     color: #ffffff; }
   .register-container .register-btn {

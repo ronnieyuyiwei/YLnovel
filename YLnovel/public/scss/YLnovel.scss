@@ -10,6 +10,7 @@ html, body ,li ,ul{
   height:100%;
 }
 a{
+  color: $font-color;
   text-decoration: none;
 }
 li{
@@ -43,8 +44,25 @@ li{
       }
     }
   }
-  .category-bar{
-
+  .classify{
+    width:100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    height: 120px;
+    a{
+      width:25%;
+      float: left;
+      margin-top: 10px;
+      img{
+        width: 30px;
+        display: inline-block;
+      }
+      label{
+        color: $font-color;
+        display: block;
+      }
+    }
   }
   //故事
   .story-container{
@@ -323,12 +341,12 @@ li{
     .verity-code{
       display: inline-block;
       width:40%;
-      height: 45px;
+      height: 43px;
       background: #12B489;
       border-radius: 5px;
       margin-left: 10px;
       text-align: center;
-      line-height: 45px;
+      line-height: 43px;
       font-size: 14px;
       color: #ffffff;
     }
