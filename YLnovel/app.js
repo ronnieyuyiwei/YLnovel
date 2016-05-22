@@ -37,7 +37,7 @@ app.get('/register', function (req, res) {
   )
 });
 app.get('/create_story', function (req, res) {
-  res.render('create_story', { title:"注册"}
+  res.render('create_story', { title:"创作"}
   )
 });
 // catch 404 and forward to error handler
