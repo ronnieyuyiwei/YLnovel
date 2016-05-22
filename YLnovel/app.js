@@ -36,6 +36,10 @@ app.get('/register', function (req, res) {
   res.render('register', { title:"注册"}
   )
 });
+app.get('/create_story', function (req, res) {
+  res.render('create_story', { title:"注册"}
+  )
+});
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

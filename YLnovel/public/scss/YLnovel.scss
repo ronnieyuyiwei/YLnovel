@@ -1,33 +1,37 @@
-$main-color:#24C1EF; //界面主色
-$gray:#E6E6E6;
-$light-gray:#959595;//图标颜色
-$font-color:#5D5D5F;
-$bg-color:#F0F0F0;
-html, body ,li ,ul{
-  margin:0;
-  padding:0;
+$main-color: #24C1EF; //界面主色
+$gray: #E6E6E6;
+$light-gray: #959595; //图标颜色
+$font-color: #5D5D5F;
+$bg-color: #F0F0F0;
+html, body, li, ul {
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
-  height:100%;
+  height: 100%;
 }
-a{
+
+a {
   color: $font-color;
   text-decoration: none;
 }
-li{
+
+li {
   list-style: none;
 }
+
 .clearfix:before, .clearfix:after {
   display: table;
   content: " ";
   clear: both;
 }
-.body-container{
-  .front-head{
+
+.body-container {
+  .front-head {
     height: 50px;
     background: $main-color;
-    .title{
-      padding-top:15px;
-      margin:0 auto;
+    .title {
+      padding-top: 15px;
+      margin: 0 auto;
       width: 50px;
       color: #ffffff;
       letter-spacing: 5px;
@@ -35,43 +39,101 @@ li{
       font-weight: 600;
 
     }
-    .search{
+    .search {
       float: right;
       margin-top: -25px;
-      margin-right:15px;
-      img{
+      margin-right: 15px;
+      img {
         width: 26px;
       }
     }
   }
-  .classify{
-    width:100%;
+  //分类
+  .classify {
+    width: 100%;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 40px;
     height: 120px;
-    a{
-      width:25%;
+    a {
+      width: 25%;
       float: left;
       margin-top: 10px;
-      img{
+      img {
         width: 30px;
         display: inline-block;
       }
-      label{
+      label {
         color: $font-color;
         display: block;
       }
     }
   }
+  //推荐
+  .recommend {
+    width: 100%;
+    height: 150px;
+    background: #F2F2F2;
+    .recommend-title {
+      height: 35px;
+      label {
+        color: $font-color;
+        display: inline-block;
+        margin-top: 10px;
+      }
+      .title {
+        font-size: 14px;
+        margin-left: 13px;
+      }
+      .refresh {
+        font-size: 14px;
+        margin-left: 10px;
+        float: right;
+        img {
+          float: right;
+          height: 20px;
+          margin-right: 20px;
+          margin-left: 10px;
+        }
+
+      }
+
+    }
+    .recommend-section {
+      height: 100px;
+      .section {
+        width: 30%;
+        height: 84px;
+        margin-left: 2%;
+        float: left;
+        &:first-child {
+          padding-left: 5px;
+        }
+        img {
+          width: 100%;
+          height: 84px;
+        }
+        label {
+          min-width: 100px;
+          display: inline-block;
+          text-align: center;
+          color: $font-color;
+          font-size: 12px;
+        }
+      }
+    }
+
+  }
+
   //故事
-  .story-container{
+  .story-container {
+    margin-top: 13px;
     margin-bottom: 40px;
-    .story{
+    .story {
       border-bottom: 7px solid $gray;
-      .info-bar{
+      .info-bar {
         height: 45px;
-        .category-label{
+        .category-label {
           float: left;
           width: 45px;
           height: 21px;
@@ -83,32 +145,32 @@ li{
           font-weight: 600;
           margin-left: 10px;
           //此处对不同分类应该有不同的标签颜色
-          &.label-science{     //科幻
+          &.label-science { //科幻
             margin-top: 11px;
             background: #96D6B6;
           }
         }
-        .title{
+        .title {
           float: left;
           margin-top: 11px;
           margin-left: 10px;
           width: 180px;
-          color:$font-color;
+          color: $font-color;
           font-size: 16px;
-          font-weight:500;
+          font-weight: 500;
           overflow: hidden;
-          text-overflow:ellipsis;
+          text-overflow: ellipsis;
         }
-        .author{
+        .author {
           float: right;
           margin-top: 10px;
           width: 110px;
 
-          img{
+          img {
             width: 25px;
             height: 25px;
           }
-          label{
+          label {
             position: relative;
             top: -5px;
             display: inline-block;
@@ -121,49 +183,49 @@ li{
           }
         }
       }
-      .content{
+      .content {
         height: 200px;
-        img{
+        img {
           height: 200px;
           width: 100%;
         }
       }
-      .sub-info-bar{
+      .sub-info-bar {
         height: 40px;
-        width:100%;
+        width: 100%;
         line-height: 40px;
-        .sub-title{
+        .sub-title {
           float: left;
-          width:53%;
+          width: 53%;
           margin-left: 2%;
 
         }
-       .comments{
-         float: right;
-         width: 45%;
-         color: $light-gray;
-         text-align: center;
-         span{
-           float: right;
-           display: inline-block;
-           margin-top: 2px;
-           margin-right: 5px;
-           &.comments{
-             margin-left: 5px;
-           }
-         }
-          img{
+        .comments {
+          float: right;
+          width: 45%;
+          color: $light-gray;
+          text-align: center;
+          span {
+            float: right;
+            display: inline-block;
+            margin-top: 2px;
+            margin-right: 5px;
+            &.comments {
+              margin-left: 5px;
+            }
+          }
+          img {
             width: 20px;
           }
-         label{
-           margin-left: 5px;
-         }
-         label.num{
-           position: relative;
-           top: -3px;
-           display: inline-block;
-           margin-left: 4px;
-         }
+          label {
+            margin-left: 5px;
+          }
+          label.num {
+            position: relative;
+            top: -3px;
+            display: inline-block;
+            margin-left: 4px;
+          }
 
         }
       }
@@ -171,39 +233,41 @@ li{
   }
 
 }
+
 //底部菜单
-.bottom-bar{
+.bottom-bar {
   position: fixed;
-  bottom:0;
+  bottom: 0;
   width: 100%;
   height: 48px;
   background: #ffffff;
   border-top: 1px solid $gray;
-  .section{
+  .section {
     margin-top: 4px;
     float: left;
-    width:33%;
+    width: 25%;
     text-align: center;
-    label{
+    label {
       display: block;
       font-size: 12px;
       color: $font-color;
-      img{
+      img {
         width: 22px;
       }
     }
 
   }
 }
+
 //登录
-.login-panel{
+.login-panel {
   height: 180px;
   background: $main-color;
-  .login-btn{
+  .login-btn {
     position: relative;
     top: 45px;
     text-align: center;
-    img{
+    img {
       width: 65px;
       padding: 5px;
       border: 3px solid #ffffff;
@@ -211,48 +275,49 @@ li{
       background: #ffffff;
     }
   }
-  .label{
+  .label {
     position: relative;
     top: 50px;
     text-align: center;
 
   }
 }
-.function{
-  background: $bg-color ;
-  padding-top:10px;
-  img.icon{
+
+.function {
+  background: $bg-color;
+  padding-top: 10px;
+  img.icon {
     margin-top: 10px;
     margin-left: 15px;
     width: 25px;
   }
-  img.arrow{
+  img.arrow {
     float: right;
     margin-right: 12px;
     margin-top: 5px;
 
   }
-  .my-message{
-    height:40px;
+  .my-message {
+    height: 40px;
     background: #ffffff;
   }
-  .my-works{
+  .my-works {
     margin-top: 10px;
-    height:40px;
+    height: 40px;
     background: #ffffff;
   }
-  .my-focus{
+  .my-focus {
     //border-top: 1px solid $bg-color;
-    height:40px;
+    height: 40px;
     margin-top: 10px;
     background: #ffffff;
   }
-  .my-settings{
+  .my-settings {
     margin-top: 10px;
-    height:40px;
+    height: 40px;
     background: #ffffff;
   }
-  label{
+  label {
     display: inline-block;
     margin-left: 15px;
     position: relative;
@@ -260,87 +325,88 @@ li{
   }
 }
 
-.login-container{
+.login-container {
   background: $bg-color;
-  .login-head{
+  .login-head {
     padding-top: 10px;
     height: 30px;
-    img{
+    img {
       margin-left: 10px;
       height: 25px;
     }
-    label{
+    label {
       float: right;
       margin-right: 25px;
       color: $light-gray;
     }
   }
-  .login-input{
-    input{
+  .login-input {
+    input {
       display: block;
-      width:100%;
+      width: 100%;
       height: 40px;
       border: none;
       background: #ffffff;
       padding-left: 15px;
       font-size: 14px;
-      &:last-child{
+      &:last-child {
         margin-top: 5px;
       }
 
     }
   }
-  .login-btn{
+  .login-btn {
     width: 90%;
     height: 45px;
     background: $main-color;
     margin: 20px auto 0 auto;
     border-radius: 5px;
     text-align: center;
-    line-height:45px;
+    line-height: 45px;
     font-size: 16px;
     color: #ffffff;
-    font-weight:600;
+    font-weight: 600;
   }
-  .login-regist{
+  .login-regist {
     width: 65px;
-    margin:25px auto 0 auto;
+    margin: 25px auto 0 auto;
   }
 }
-.register-container{
+
+.register-container {
   background: $bg-color;
-  .register-head{
+  .register-head {
     padding-top: 10px;
     height: 30px;
   }
-  .register-input{
-    .cell,.password{
-      width:100%;
+  .register-input {
+    .cell, .password {
+      width: 100%;
       height: 40px;
       border: none;
       background: #ffffff;
       padding-left: 15px;
       font-size: 14px;
     }
-    .cell{
+    .cell {
       margin-top: 10px;
     }
-    .password{
+    .password {
       margin-top: 5px;
     }
-    .verity{
+    .verity {
       display: inline-block;
       width: 50%;
       height: 40px;
-      border:none;
+      border: none;
       margin-top: 5px;
       padding-left: 15px;
       font-size: 14px;
 
     }
-    .verity-code{
+    .verity-code {
       display: inline-block;
-      width:40%;
+      width: 40%;
       height: 43px;
       background: #12B489;
       border-radius: 5px;
@@ -351,16 +417,59 @@ li{
       color: #ffffff;
     }
   }
-  .register-btn{
+  .register-btn {
     width: 90%;
     height: 43px;
     background: $main-color;
     margin: 20px auto 0 auto;
     border-radius: 5px;
     text-align: center;
-    line-height:43px;
+    line-height: 43px;
     font-size: 16px;
     color: #ffffff;
-    font-weight:600;
+    font-weight: 600;
+  }
+}
+
+//创建故事
+.create-page{
+  .create-head {
+    height: 50px;
+    background: $main-color;
+    div{
+      float: left;
+      text-align: center;
+      color: #ffffff;
+      font-weight:600;
+    }
+    .btn-cancel {
+      width:20%;
+      line-height: 50px;
+    }
+    .title{
+      position: relative;
+      top: 5px;
+      width:60%;
+      line-height: 20px;
+      font-size: 14px;
+      label{
+        display: block;
+      }
+    }
+    .btn-commit {
+      width: 20%;
+      line-height: 50px;;
+    }
+  }
+  .input{
+    textarea{
+      margin:0;
+      padding:0;
+      border:none;
+      width:100%;
+      height: 300px;
+      font-size: 15px;
+      padding-left: 10px;
+    }
   }
 }

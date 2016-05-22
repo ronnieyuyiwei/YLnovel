@@ -49,7 +49,48 @@ li {
     .body-container .classify a label {
       color: #5D5D5F;
       display: block; }
+.body-container .recommend {
+  width: 100%;
+  height: 150px;
+  background: #F2F2F2; }
+  .body-container .recommend .recommend-title {
+    height: 35px; }
+    .body-container .recommend .recommend-title label {
+      color: #5D5D5F;
+      display: inline-block;
+      margin-top: 10px; }
+    .body-container .recommend .recommend-title .title {
+      font-size: 14px;
+      margin-left: 13px; }
+    .body-container .recommend .recommend-title .refresh {
+      font-size: 14px;
+      margin-left: 10px;
+      float: right; }
+      .body-container .recommend .recommend-title .refresh img {
+        float: right;
+        height: 20px;
+        margin-right: 20px;
+        margin-left: 10px; }
+  .body-container .recommend .recommend-section {
+    height: 100px; }
+    .body-container .recommend .recommend-section .section {
+      width: 30%;
+      height: 84px;
+      margin-left: 2%;
+      float: left; }
+      .body-container .recommend .recommend-section .section:first-child {
+        padding-left: 5px; }
+      .body-container .recommend .recommend-section .section img {
+        width: 100%;
+        height: 84px; }
+      .body-container .recommend .recommend-section .section label {
+        min-width: 100px;
+        display: inline-block;
+        text-align: center;
+        color: #5D5D5F;
+        font-size: 12px; }
 .body-container .story-container {
+  margin-top: 13px;
   margin-bottom: 40px; }
   .body-container .story-container .story {
     border-bottom: 7px solid #E6E6E6; }
@@ -140,7 +181,7 @@ li {
   .bottom-bar .section {
     margin-top: 4px;
     float: left;
-    width: 33%;
+    width: 25%;
     text-align: center; }
     .bottom-bar .section label {
       display: block;
@@ -282,5 +323,36 @@ li {
     font-size: 16px;
     color: #ffffff;
     font-weight: 600; }
+
+.create-page .create-head {
+  height: 50px;
+  background: #24C1EF; }
+  .create-page .create-head div {
+    float: left;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 600; }
+  .create-page .create-head .btn-cancel {
+    width: 20%;
+    line-height: 50px; }
+  .create-page .create-head .title {
+    position: relative;
+    top: 5px;
+    width: 60%;
+    line-height: 20px;
+    font-size: 14px; }
+    .create-page .create-head .title label {
+      display: block; }
+  .create-page .create-head .btn-commit {
+    width: 20%;
+    line-height: 50px; }
+.create-page .input textarea {
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 100%;
+  height: 300px;
+  font-size: 15px;
+  padding-left: 10px; }
 
 /*# sourceMappingURL=YLnovel.css.map */
