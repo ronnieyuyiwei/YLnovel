@@ -44,6 +44,10 @@ app.get('/create-choose', function (req, res) {
   res.render('create-choose', { title:"创作"}
   )
 });
+app.get('/details', function (req, res) {
+  res.render('details', { title:"故事详情"}
+  )
+});
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

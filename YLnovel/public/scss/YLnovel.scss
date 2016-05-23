@@ -3,6 +3,7 @@ $gray: #E6E6E6;
 $light-gray: #959595; //图标颜色
 $font-color: #5D5D5F;
 $bg-color: #F0F0F0;
+$light-bg-color:#F4F4F4;
 html, body, li, ul {
   margin: 0;
   padding: 0;
@@ -378,7 +379,7 @@ li {
   .register-head {
     padding-top: 10px;
     height: 30px;
-    img{
+    img {
       width: 25px;
     }
   }
@@ -435,27 +436,27 @@ li {
 }
 
 //创建故事
-.create-page{
+.create-page {
   .create-head {
     height: 50px;
     background: $main-color;
-    div{
+    div {
       float: left;
       text-align: center;
       color: #ffffff;
-      font-weight:600;
+      font-weight: 600;
     }
     .btn-cancel {
-      width:20%;
+      width: 20%;
       line-height: 50px;
     }
-    .title{
+    .title {
       position: relative;
       top: 5px;
-      width:60%;
+      width: 60%;
       line-height: 20px;
       font-size: 14px;
-      label{
+      label {
         display: block;
       }
     }
@@ -464,12 +465,12 @@ li {
       line-height: 50px;;
     }
   }
-  .input{
-    label.story-title{
+  .input {
+    label.story-title {
       display: inline-block;
       margin: 10px 0 10px 10px;
     }
-    label.story-title-input input{
+    label.story-title-input input {
       margin-left: 15px;
       border-radius: 0;
       -webkit-appearance: none;
@@ -477,38 +478,37 @@ li {
       height: 25px;
       padding-left: 15px;
     }
-    textarea.brief-introduction{
+    textarea.brief-introduction {
       margin: 10px 0 0 0;
-      padding:5px 0 0 15px;
+      padding: 5px 0 0 15px;
       -webkit-appearance: none;
       border-radius: 0;
       border: none;
       border-top: 1px solid gray;
       border-bottom: 1px solid gray;
-      width:95%;
+      width: 95%;
       height: 90px;
       font-size: 15px;
     }
-    textarea.story-content{
+    textarea.story-content {
       margin: 10px 0 0 0;
-      padding:5px 0 0 15px;
+      padding: 5px 0 0 15px;
       -webkit-appearance: none;
       border-radius: 0;
       border: none;
       border-top: 1px solid gray;
       border-bottom: 1px solid gray;
-      width:95%;
+      width: 95%;
       height: 150px;
       font-size: 15px;
     }
 
-
   }
-  .btn{
+  .btn {
     border: 1px solid $gray;
-    width:95%;
+    width: 95%;
     margin-left: 10px;
-    .add-img{
+    .add-img {
       float: left;
       width: 33%;
       height: 40px;
@@ -517,7 +517,7 @@ li {
 
       line-height: 40px;
       font-size: 14px;
-      a{
+      a {
         position: relative;
         color: #ffffff;
         border-radius: 4px;
@@ -526,7 +526,7 @@ li {
         *display: inline;
         *zoom: 1
       }
-      .a-upload  input {
+      .a-upload input {
         position: absolute;
         font-size: 100px;
         right: 0;
@@ -536,12 +536,11 @@ li {
         cursor: pointer
       }
 
-
     }
-    .save-draft{
-      border-right:1px solid $gray
+    .save-draft {
+      border-right: 1px solid $gray
     }
-    .choose-classify, .save-draft{
+    .choose-classify, .save-draft {
       float: left;
       width: 33%;
       height: 40px;
@@ -549,13 +548,13 @@ li {
       color: $main-color;
       text-align: center;
       border-left: 1px solid $gray;
-      border-bottom:1px solid $gray;
+      border-bottom: 1px solid $gray;
       font-size: 14px;
-      img{
+      img {
         margin-top: 5px;
         width: 26px;
       }
-      label{
+      label {
         position: relative;
         top: -5px;
         left: 2px;;
@@ -564,37 +563,37 @@ li {
 
   }
   //预览图
-  #localImag{
+  #localImag {
     text-align: center;
-    img{
+    img {
       width: 120px;
       height: 90px;
       margin: 10px auto 0 auto;
     }
   }
   //隐藏弹出层
-  .classify-bar{
+  .classify-bar {
     position: relative;
     top: -100px;
     display: none;
-    width:95%;
+    width: 95%;
     margin: 2px auto 0 auto;
     height: 100px;
     text-align: center;
     padding-left: 3px;
     background: #ffffff;
-    .theme{
+    .theme {
       float: left;
       height: 46px;
-      width:24.3%;
+      width: 24.3%;
       border: 1px solid $gray;
       background: #ffffff;
-      img{
+      img {
         position: relative;
         top: 8px;
         width: 27px;
       }
-      label{
+      label {
         position: relative;
         left: 3px;
         top: -2px;
@@ -606,46 +605,181 @@ li {
 }
 
 //创作选择
-.create-choose{
-  .img-container{
+.create-choose {
+  .img-container {
     position: relative;
     top: 200px;
     width: 250px;
     text-align: center;
-    margin:0 auto;
-    .btn{
+    margin: 0 auto;
+    .btn {
       float: left;
-      &:nth-child(2){
+      &:nth-child(2) {
         margin-left: 50px;
       }
-    label{
-      display: inline-block;
-    }
+      label {
+        display: inline-block;
+      }
       width: 100px;
-     img{
-       width: 45px;
-       padding: 15px;
-       border-radius: 300px;
-     }
-      .create-new img{
+      img {
+        width: 45px;
+        padding: 15px;
+        border-radius: 300px;
+      }
+      .create-new img {
         background: #F06657;
       }
-      .continue img{
+      .continue img {
         background: #63CBCC;
       }
     }
 
   }
-  .close{
-    width:100%;
+  .close {
+    width: 100%;
     position: fixed;
-    bottom:0;
+    bottom: 0;
     height: 36px;
     background: $bg-color;
     text-align: center;
-    img{
+    img {
       margin-top: 5px;
       width: 25px;
     }
   }
+}
+
+//详情页面
+.story-details {
+  //头部
+  .head-background {
+    width: 100%;
+    height: 125px;
+    img.bg {
+      width: 100%;
+      height: 125px;
+      opacity: 0.2;
+    }
+    .story-info {
+      position: absolute;
+      top: 55px;
+      left: 30px;
+      img {
+        width: 120px;
+        height: 90px;
+        border: 2px solid #ffffff;
+      }
+      .word {
+        vertical-align: top;
+        margin-left: 15px;
+        display: inline-block;
+        color: $font-color;
+        font-weight: 600;
+        .info {
+          margin-top: 3px;
+          label {
+            margin-right: 10px;
+            font-size: 12px;
+          }
+        }
+        .author {
+          margin-top: 3px;
+          font-size: 12px;
+        }
+        .focus-btn {
+          width: 35px;
+          float: right;
+          margin-top: -10px;
+          img {
+            width: 25px;
+            height: 25px;
+            background: #ffffff;
+            border-radius: 300px;
+            padding: 5px;
+          }
+        }
+      }
+    }
+    .back-btn{
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      img{
+        width: 15px;
+        background: black;
+        border:2px solid #ffffff;
+        padding: 2px;
+        opacity:0.7;
+        border-radius: 300px;
+      }
+    }
+  }
+  //分支
+  .branch-list{
+    height: 180px;
+    background: $light-bg-color;
+    .recommend-branch{
+      padding: 30px 0 0 15px;
+      .title{
+        font-size: 14px;
+        color: #F06657;
+        font-weight: 600;
+      }
+      .branch{
+        float: left;
+        width: 70px;
+        height: 30px;
+        background: #ffffff;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 5px;
+        border: 1px solid $light-gray;
+        margin-right: 10px;
+        margin-top: 5px;
+
+      }
+    }
+    .hot-branch{
+      margin-left: 15px;
+      margin-top: 10px;
+      .title{
+        font-size: 14px;
+        font-weight: 600;
+        color: #C37D98;
+      }
+      .branch{
+        float: left;
+        width: 70px;
+        height: 30px;
+        background: #ffffff;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 5px;
+        border: 1px solid $light-gray;
+        margin-right: 10px;
+        margin-top: 5px;
+
+      }
+    }
+  }
+  //简介
+  .summary{
+    height: 200px;
+    border-top: 1px solid #ffffff;
+    background: $light-bg-color;
+    padding: 10px 13px 0 13px;
+
+    .title{
+      color: $main-color;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .summary-content{
+      color: $font-color;
+      font-size: 14px;
+      text-indent: 30px;
+    }
+
+  }
+;
 }
