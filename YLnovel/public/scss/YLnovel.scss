@@ -475,8 +475,9 @@ li {
       -webkit-appearance: none;
       width: 180px;
       height: 25px;
+      padding-left: 15px;
     }
-    textarea{
+    textarea.brief-introduction{
       margin: 10px 0 0 0;
       padding:5px 0 0 15px;
       -webkit-appearance: none;
@@ -485,9 +486,22 @@ li {
       border-top: 1px solid gray;
       border-bottom: 1px solid gray;
       width:95%;
-      height: 250px;
+      height: 90px;
       font-size: 15px;
     }
+    textarea.story-content{
+      margin: 10px 0 0 0;
+      padding:5px 0 0 15px;
+      -webkit-appearance: none;
+      border-radius: 0;
+      border: none;
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray;
+      width:95%;
+      height: 150px;
+      font-size: 15px;
+    }
+
 
   }
   .btn{
@@ -500,9 +514,32 @@ li {
       height: 40px;
       background: $main-color;
       text-align: center;
-      color: #ffffff;
+
       line-height: 40px;
       font-size: 14px;
+      a{
+        position: relative;
+        color: #ffffff;
+        border-radius: 4px;
+        overflow: hidden;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1
+      }
+      .a-upload  input {
+        position: absolute;
+        font-size: 100px;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        cursor: pointer
+      }
+
+
+    }
+    .save-draft{
+      border-right:1px solid $gray
     }
     .choose-classify, .save-draft{
       float: left;
@@ -512,6 +549,7 @@ li {
       color: $main-color;
       text-align: center;
       border-left: 1px solid $gray;
+      border-bottom:1px solid $gray;
       font-size: 14px;
       img{
         margin-top: 5px;
@@ -525,31 +563,89 @@ li {
     }
 
   }
+  //预览图
+  #localImag{
+    text-align: center;
+    img{
+      width: 120px;
+      height: 90px;
+      margin: 10px auto 0 auto;
+    }
+  }
   //隐藏弹出层
   .classify-bar{
+    position: relative;
+    top: -100px;
     display: none;
     width:95%;
-    margin: 0 auto;
-    height: 82px;
+    margin: 2px auto 0 auto;
+    height: 100px;
     text-align: center;
     padding-left: 3px;
+    background: #ffffff;
     .theme{
       float: left;
-      height: 40px;
+      height: 46px;
       width:24.3%;
       border: 1px solid $gray;
+      background: #ffffff;
       img{
         position: relative;
-        top: 4px;
-        width: 28px;
+        top: 8px;
+        width: 27px;
       }
       label{
         position: relative;
         left: 3px;
-        top: -3px;
+        top: -2px;
         font-size: 14px;
         color: $font-color;
       }
+    }
+  }
+}
+
+//创作选择
+.create-choose{
+  .img-container{
+    position: relative;
+    top: 200px;
+    width: 250px;
+    text-align: center;
+    margin:0 auto;
+    .btn{
+      float: left;
+      &:nth-child(2){
+        margin-left: 50px;
+      }
+    label{
+      display: inline-block;
+    }
+      width: 100px;
+     img{
+       width: 45px;
+       padding: 15px;
+       border-radius: 300px;
+     }
+      .create-new img{
+        background: #F06657;
+      }
+      .continue img{
+        background: #63CBCC;
+      }
+    }
+
+  }
+  .close{
+    width:100%;
+    position: fixed;
+    bottom:0;
+    height: 36px;
+    background: $bg-color;
+    text-align: center;
+    img{
+      margin-top: 5px;
+      width: 25px;
     }
   }
 }

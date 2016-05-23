@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><head><title></title><link rel="stylesheet" href="/stylesheets/YLnovel.css"><meta charset="utf-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="apple-mobile-web-app-capable" content="yes"><script src="/javascripts/iscroll.js"></script><script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script></head><body><div class="create-page"><div class="create-head"><div class="btn-cancel">取消</div><div class="title"><label>创作故事</label><label>西飞白日</label></div><div class="btn-commit">提交</div></div><div class="input"><label class="story-title">故事标题</label><label class="story-title-input"><input type="text"></label><label><textarea placeholder="故事简介…" class="brief-introduction"></textarea></label><label><textarea placeholder="留下你的故事吧…" class="story-content"></textarea></label></div><div class="btn"><div class="add-img"><a href="javascript:;" class="a-upload"><input id="doc" type="file" multiple="multiple" onchange="javascript:setImagePreview();"><label>上传封面图片</label></a></div><div class="choose-classify"><img src="/images/icons/choose-theme.png"><label>选择分类</label></div><div class="save-draft"><img src="/images/icons/save-drafts.png"><label>保存草稿</label></div></div><div id="localImag"><img id="preview" src=""><div class="clearfix"></div></div><div class="classify-bar"><div class="theme"><img src="/images/icons/classify-science.png"><label>科幻</label></div><div class="theme"><img src="/images/icons/classify-literature.png"><label>文学</label></div><div class="theme"><img src="/images/icons/classify-kongfu.png"><label>功夫</label></div><div class="theme"><img src="/images/icons/classify-history.png"><label>历史</label></div><div class="theme"><img src="/images/icons/classify-love.png"><label>言情</label></div><div class="theme"><img src="/images/icons/classify-originality.png"><label>创意</label></div><div class="theme"><img src="/images/icons/classify-campus.png"><label>校园</label></div><div class="theme"><img src="/images/icons/classify-other.png"><label>其他</label></div></div></div><script>function setImagePreview(avalue) {
+    //input
+    var docObj = document.getElementById("doc");
+    //img
+    var imgObjPreview = document.getElementById("preview");
+    //div
+    var divs = document.getElementById("localImag");
+    if (docObj.files && docObj.files[0]) {
+        //火狐下，直接设img属性
+
+        //imgObjPreview.src = docObj.files[0].getAsDataURL();
+        //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+        imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+    } else {
+        //IE下，使用滤镜
+        docObj.select();
+        var imgSrc = document.selection.createRange().text;
+        var localImagId = document.getElementById("localImag");
+        //必须设置初始大小
+        localImagId.style.width = "100px";
+        localImagId.style.height = "100px";
+        //图片异常的捕捉，防止用户修改后缀来伪造图片
+        try {
+            localImagId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+            localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+        } catch (e) {
+            alert("您上传的图片格式不正确，请重新选择!");
+            return false;
+        }
+        imgObjPreview.style.display = 'none';
+        document.selection.empty();
+    }
+    return true;
+}</script><!--Created by Yu Yiwei on 2016/5/15.--><div class="bottom-bar"><div class="section"><label><a href="/"><img src="/images/icons/frontpage.png"></a></label><label><a href="/">首页</a></label></div><div class="section"><label><img src="/images/icons/focus.png"></label><label>关注</label></div><div class="section"><label><a href="/create-choose"><img src="/images/icons/new.png"></a></label><label>创作</label></div><div class="section"><label><a href="/mypage"><img src="/images/icons/me.png"></a></label><label><a href="/mypage">我的</a></label></div></div><script>$(function () {
+    $(".choose-classify").click(function(){
+        $(".classify-bar").toggle();
+    })
+})</script></body></html>

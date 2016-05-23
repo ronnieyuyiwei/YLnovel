@@ -1,0 +1,19 @@
+//
+   Created by Yu Yiwei on 2016/5/23.
+
+extends includes/layout
+block content
+    .create-choose
+        .img-container
+            .btn
+                .create-new
+                    a(href="/create-story")
+                        img(src="/images/icons/create-new.png")
+                    label 新故事
+            .btn
+                .continue
+                    img(src="/images/icons/continue.png")
+                    label 故事续写
+            .clearfix
+        .close
+            img(src="/images/icons/close.png",onclick="javascript:history.go(-1);")

@@ -1,0 +1,102 @@
+//
+   Created by Yu Yiwei on 2016/5/22.
+extends includes/layout
+block append pagescript
+    script.
+        $(function () {
+            $(".choose-classify").click(function(){
+                $(".classify-bar").toggle();
+            })
+        })
+block content
+    .create-page
+        .create-head
+            .btn-cancel 取消
+            .title
+                label 创作故事
+                label 西飞白日
+            .btn-commit 提交
+        .input
+            label.story-title 故事标题
+            label.story-title-input
+                input(type="text")
+            label
+                textarea.brief-introduction(placeholder="故事简介…")
+            label
+                textarea.story-content(placeholder="留下你的故事吧…")
+        .btn
+            .add-img
+                a(href="javascript:;" class="a-upload")
+                    input#doc(type="file",multiple="multiple",onchange="javascript:setImagePreview();")
+                    label 上传封面图片
+            .choose-classify
+                img(src="/images/icons/choose-theme.png")
+                label 选择分类
+            .save-draft
+                img(src="/images/icons/save-drafts.png")
+                label 保存草稿
+        #localImag
+            img#preview(src="")
+            .clearfix
+        //-隐藏弹出层
+        .classify-bar
+            .theme
+                img(src="/images/icons/classify-science.png")
+                label 科幻
+            .theme
+                img(src="/images/icons/classify-literature.png")
+                label 文学
+            .theme
+                img(src="/images/icons/classify-kongfu.png")
+                label 功夫
+            .theme
+                img(src="/images/icons/classify-history.png")
+                label 历史
+            .theme
+                img(src="/images/icons/classify-love.png")
+                label 言情
+            .theme
+                img(src="/images/icons/classify-originality.png")
+                label 创意
+            .theme
+                img(src="/images/icons/classify-campus.png")
+                label 校园
+            .theme
+                img(src="/images/icons/classify-other.png")
+                label 其他
+    script.
+        function setImagePreview(avalue) {
+            //input
+            var docObj = document.getElementById("doc");
+            //img
+            var imgObjPreview = document.getElementById("preview");
+            //div
+            var divs = document.getElementById("localImag");
+            if (docObj.files && docObj.files[0]) {
+                //火狐下，直接设img属性
+
+                //imgObjPreview.src = docObj.files[0].getAsDataURL();
+                //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+                imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+            } else {
+                //IE下，使用滤镜
+                docObj.select();
+                var imgSrc = document.selection.createRange().text;
+                var localImagId = document.getElementById("localImag");
+                //必须设置初始大小
+                localImagId.style.width = "100px";
+                localImagId.style.height = "100px";
+                //图片异常的捕捉，防止用户修改后缀来伪造图片
+                try {
+                    localImagId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                    localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+                } catch (e) {
+                    alert("您上传的图片格式不正确，请重新选择!");
+                    return false;
+                }
+                imgObjPreview.style.display = 'none';
+                document.selection.empty();
+            }
+            return true;
+        }
+    include includes/bottom-menu

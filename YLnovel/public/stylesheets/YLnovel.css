@@ -356,8 +356,9 @@ li {
   border-radius: 0;
   -webkit-appearance: none;
   width: 180px;
-  height: 25px; }
-.create-page .input textarea {
+  height: 25px;
+  padding-left: 15px; }
+.create-page .input textarea.brief-introduction {
   margin: 10px 0 0 0;
   padding: 5px 0 0 15px;
   -webkit-appearance: none;
@@ -366,7 +367,18 @@ li {
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
   width: 95%;
-  height: 250px;
+  height: 90px;
+  font-size: 15px; }
+.create-page .input textarea.story-content {
+  margin: 10px 0 0 0;
+  padding: 5px 0 0 15px;
+  -webkit-appearance: none;
+  border-radius: 0;
+  border: none;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  width: 95%;
+  height: 150px;
   font-size: 15px; }
 .create-page .btn {
   border: 1px solid #E6E6E6;
@@ -378,9 +390,26 @@ li {
     height: 40px;
     background: #24C1EF;
     text-align: center;
-    color: #ffffff;
     line-height: 40px;
     font-size: 14px; }
+    .create-page .btn .add-img a {
+      position: relative;
+      color: #ffffff;
+      border-radius: 4px;
+      overflow: hidden;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1; }
+    .create-page .btn .add-img .a-upload input {
+      position: absolute;
+      font-size: 100px;
+      right: 0;
+      top: 0;
+      opacity: 0;
+      filter: alpha(opacity=0);
+      cursor: pointer; }
+  .create-page .btn .save-draft {
+    border-right: 1px solid #E6E6E6; }
   .create-page .btn .choose-classify, .create-page .btn .save-draft {
     float: left;
     width: 33%;
@@ -389,6 +418,7 @@ li {
     color: #24C1EF;
     text-align: center;
     border-left: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
     font-size: 14px; }
     .create-page .btn .choose-classify img, .create-page .btn .save-draft img {
       margin-top: 5px;
@@ -397,27 +427,69 @@ li {
       position: relative;
       top: -5px;
       left: 2px; }
+.create-page #localImag {
+  text-align: center; }
+  .create-page #localImag img {
+    width: 120px;
+    height: 90px;
+    margin: 10px auto 0 auto; }
 .create-page .classify-bar {
+  position: relative;
+  top: -100px;
   display: none;
   width: 95%;
-  margin: 0 auto;
-  height: 82px;
+  margin: 2px auto 0 auto;
+  height: 100px;
   text-align: center;
-  padding-left: 3px; }
+  padding-left: 3px;
+  background: #ffffff; }
   .create-page .classify-bar .theme {
     float: left;
-    height: 40px;
+    height: 46px;
     width: 24.3%;
-    border: 1px solid #E6E6E6; }
+    border: 1px solid #E6E6E6;
+    background: #ffffff; }
     .create-page .classify-bar .theme img {
       position: relative;
-      top: 4px;
-      width: 28px; }
+      top: 8px;
+      width: 27px; }
     .create-page .classify-bar .theme label {
       position: relative;
       left: 3px;
-      top: -3px;
+      top: -2px;
       font-size: 14px;
       color: #5D5D5F; }
+
+.create-choose .img-container {
+  position: relative;
+  top: 200px;
+  width: 250px;
+  text-align: center;
+  margin: 0 auto; }
+  .create-choose .img-container .btn {
+    float: left;
+    width: 100px; }
+    .create-choose .img-container .btn:nth-child(2) {
+      margin-left: 50px; }
+    .create-choose .img-container .btn label {
+      display: inline-block; }
+    .create-choose .img-container .btn img {
+      width: 45px;
+      padding: 15px;
+      border-radius: 300px; }
+    .create-choose .img-container .btn .create-new img {
+      background: #F06657; }
+    .create-choose .img-container .btn .continue img {
+      background: #63CBCC; }
+.create-choose .close {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 36px;
+  background: #F0F0F0;
+  text-align: center; }
+  .create-choose .close img {
+    margin-top: 5px;
+    width: 25px; }
 
 /*# sourceMappingURL=YLnovel.css.map */
