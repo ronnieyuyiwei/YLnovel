@@ -6,6 +6,7 @@ block append pagescript
         $(function(){
             $(".register-container").css("height",h);
         })
+    script(src="/javascripts/register.js")
 block content
     .register-container
         .register-head
@@ -14,6 +15,6 @@ block content
         .register-input
             input.cell(type="text",placeholder="请输入手机号")
             input.password(type="password",placeholder="请输入密码")
-            input.verity(type="text",placeholder="验证码")
-            .verity-code 获取验证码
+            //input.verity(type="text",placeholder="验证码")
+            //.verity-code 获取验证码
         .register-btn 立即注册

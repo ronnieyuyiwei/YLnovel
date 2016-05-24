@@ -500,8 +500,8 @@ li {
     height: 125px;
     opacity: 0.2; }
   .story-details .head-background .story-info {
-    position: absolute;
-    top: 55px;
+    position: relative;
+    top: -75px;
     left: 30px; }
     .story-details .head-background .story-info img {
       width: 120px;
@@ -580,18 +580,47 @@ li {
       border: 1px solid #959595;
       margin-right: 10px;
       margin-top: 5px; }
-.story-details .summary {
-  height: 200px;
+.story-details .story-summary {
+  height: 160px;
   border-top: 1px solid #ffffff;
   background: #F4F4F4;
   padding: 10px 13px 0 13px; }
-  .story-details .summary .title {
+  .story-details .story-summary .title {
     color: #24C1EF;
     font-weight: 600;
-    margin-bottom: 5px; }
-  .story-details .summary .summary-content {
-    color: #5D5D5F;
-    font-size: 14px;
+    margin-bottom: 5px;
+    margin-left: 5px; }
+  .story-details .story-summary .summary-content {
+    color: #959595;
+    font-size: 13px;
     text-indent: 30px; }
+.story-details .comments-container {
+  background: #F4F4F4; }
+  .story-details .comments-container .title {
+    height: 40px;
+    margin-left: 16px;
+    color: #36B67F;
+    font-weight: 600; }
+  .story-details .comments-container .comments .comments-content .content {
+    margin-top: 13px;
+    min-height: 100px;
+    border-bottom: 1px solid #E6E6E6; }
+    .story-details .comments-container .comments .comments-content .content .head-img {
+      width: 10%;
+      float: left; }
+      .story-details .comments-container .comments .comments-content .content .head-img img {
+        margin-left: 5px;
+        margin-top: 10px;
+        width: 32px; }
+    .story-details .comments-container .comments .comments-content .content .info {
+      width: 90%;
+      float: left;
+      color: #5D5D5F;
+      font-size: 14px; }
+      .story-details .comments-container .comments .comments-content .content .info .user-info, .story-details .comments-container .comments .comments-content .content .info .comments-info {
+        padding-left: 10px;
+        padding-right: 10px; }
+      .story-details .comments-container .comments .comments-content .content .info .comments-info {
+        margin-top: 10px; }
 
 /*# sourceMappingURL=YLnovel.css.map */

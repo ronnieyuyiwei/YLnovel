@@ -4,7 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var user = require('./dao/usersign');
+var url = require("url");
+var qs = require("querystring");
 //var routes = require('./routes/index');
 var app = express();
 
@@ -35,6 +37,11 @@ app.get('/login', function (req, res) {
 app.get('/register', function (req, res) {
   res.render('register', { title:"注册"}
   )
+});
+app.post('/register',function(req,res){
+ user.register(req.body.id2,req.body.password2,res);
+  var Test="yes";
+  res.send(Test);
 });
 app.get('/create-story', function (req, res) {
   res.render('create-story', { title:"创作"}
