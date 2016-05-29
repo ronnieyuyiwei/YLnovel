@@ -26,22 +26,32 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', function (req, res) {
   res.render('index',{title:"露珠小说"})
 });
+
 app.get('/mypage', function (req, res) {
-  res.render('mypage', {title:"我的"}
+  res.render('mypage', {username:user.get_username()}
   )
 });
 app.get('/login', function (req, res) {
   res.render('login', { title:"登录"}
   )
 });
+app.post('/login', function (req, res) {
+  user.login(req.body.id,req.body.password,req,res);
+  console.log("后台得到"+ user.get_username());
+  var test = "成功";
+  res.send(test);
+
+
+});
 app.get('/register', function (req, res) {
   res.render('register', { title:"注册"}
   )
 });
 app.post('/register',function(req,res){
- user.register(req.body.id2,req.body.password2,res);
-  var Test="yes";
-  res.send(Test);
+  user.register(req.body.id,req.body.password,res);
+  var test = "注册成功"
+  res.send(test)
+
 });
 app.get('/create-story', function (req, res) {
   res.render('create-story', { title:"创作"}

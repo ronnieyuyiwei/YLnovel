@@ -8,7 +8,7 @@ block append pagescript
         $(function(){
             $(".login-container").css("height",h);
         })
-
+    script(src="/javascripts/register.js")
 block content
     .login-container
         .login-head
@@ -16,8 +16,8 @@ block content
                 img(src="/images/icons/back.png")
             label 忘记密码
         .login-input
-            input.id(type="text",name="id",placeholder="手机号")
-            input.passowrd(type="password",name="password",placeholder="密码")
+            input.id(type="text",placeholder="手机号")
+            input.password(type="password",placeholder="密码")
         .login-btn 立即登录
         .login-regist
             a(href="/register") 立即注册

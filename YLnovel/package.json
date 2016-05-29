@@ -15,6 +15,8 @@
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
+    "express-session": "^1.13.0",
+    "fs": "0.0.2",
     "mysql": "^2.10.2",
     "querystring": "^0.2.0",
     "url": "^0.11.0"
