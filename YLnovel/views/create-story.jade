@@ -4,31 +4,62 @@ extends includes/layout
 block append pagescript
     script.
         $(function () {
+
             $(".choose-classify").click(function(){
                 $(".classify-bar").toggle();
             })
+            $(".classify-bar .theme").click(function(){
+                $(this).addClass("classify-bar-border");
+                $(this).siblings().removeClass("classify-bar-border");
+            })
+
+        $(".btn-commit").click(function(){
+
+            var title = $("input.title").val();
+            var summary = $("textarea.brief-introduction").val();
+            var story_content = $("textarea.story-content").val();
+            var classify = $(".theme.classify-bar-border").data("class");
+            $.ajax({
+                type:"post",
+                dataType:"text",
+                url:"/create-story",
+                data:{ title:title,summary:summary,story_content:story_content,classify:classify},
+                success:function(){
+                    alert("上传成功")
+                }
+
+            })
+            $("form.a-upload").submit();
         })
+
+        })
+
 block content
     .create-page
         .create-head
             .btn-cancel 取消
             .title
                 label 创作故事
-                label 西飞白日
+                label #{username}
             .btn-commit 提交
         .input
             label.story-title 故事标题
             label.story-title-input
-                input(type="text")
+                input(type="text", class="title")
             label
                 textarea.brief-introduction(placeholder="故事简介…")
             label
                 textarea.story-content(placeholder="留下你的故事吧…")
         .btn
             .add-img
-                a(href="javascript:;" class="a-upload")
-                    input#doc(type="file",multiple="multiple",onchange="javascript:setImagePreview();")
-                    label 上传封面图片
+                //a(href="javascript:;", class="a-upload")
+                //    input#doc(name='inputFile' type="file",multiple="multiple",onchange="javascript:setImagePreview();")
+                //    label 上传封面图片
+                //    input(name='btnUp', type='submit',value='上传封面图片',id="submit-btn")
+
+                form(method='post', class="a-upload",action='/create-story', enctype='multipart/form-data')
+                      input#doc(name='inputFile' type="file",multiple="multiple",onchange="javascript:setImagePreview();")
+                      label 上传封面图片
             .choose-classify
                 img(src="/images/icons/choose-theme.png")
                 label 选择分类
@@ -40,32 +71,33 @@ block content
             .clearfix
         //-隐藏弹出层
         .classify-bar
-            .theme
+            .theme(data-class="1")
                 img(src="/images/icons/classify-science.png")
                 label 科幻
-            .theme
+            .theme(data-class="2")
                 img(src="/images/icons/classify-literature.png")
                 label 文学
-            .theme
+            .theme(data-class="3")
                 img(src="/images/icons/classify-kongfu.png")
                 label 功夫
-            .theme
+            .theme(data-class="4")
                 img(src="/images/icons/classify-history.png")
                 label 历史
-            .theme
+            .theme(data-class="5")
                 img(src="/images/icons/classify-love.png")
                 label 言情
-            .theme
+            .theme(data-class="6")
                 img(src="/images/icons/classify-originality.png")
                 label 创意
-            .theme
+            .theme(data-class="7")
                 img(src="/images/icons/classify-campus.png")
                 label 校园
-            .theme
+            .theme(data-class="8")
                 img(src="/images/icons/classify-other.png")
                 label 其他
     script.
         function setImagePreview(avalue) {
+
             //input
             var docObj = document.getElementById("doc");
             //img

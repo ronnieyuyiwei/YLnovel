@@ -517,24 +517,44 @@ li {
 
       line-height: 40px;
       font-size: 14px;
-      a {
-        position: relative;
+      //a {
+      //  position: relative;
+      //  color: #ffffff;
+      //  border-radius: 4px;
+      //  overflow: hidden;
+      //  display: inline-block;
+      //  *display: inline;
+      //  *zoom: 1
+      //}
+      //.a-upload input {
+      //  position: absolute;
+      //  font-size: 100px;
+      //  right: 0;
+      //  top: 0;
+      //  opacity: 0;
+      //  filter: alpha(opacity=0);
+      //  cursor: pointer
+      //}
+      form{
+        label{
         color: #ffffff;
-        border-radius: 4px;
-        overflow: hidden;
-        display: inline-block;
-        *display: inline;
-        *zoom: 1
+
       }
-      .a-upload input {
-        position: absolute;
-        font-size: 100px;
-        right: 0;
-        top: 0;
-        opacity: 0;
-        filter: alpha(opacity=0);
-        cursor: pointer
+        input{
+          width:1px;
+
+        }
+        input[type="file" ]{
+          height:20px;
+          background: $main-color;
+          -webkit-appearance: none;
+          opacity:0;
+          filter: alpha(opacity=0);
+        }
+
       }
+
+
 
     }
     .save-draft {
@@ -572,6 +592,9 @@ li {
     }
   }
   //隐藏弹出层
+  .classify-bar-border{
+    border: 1px solid #D5491E !important;
+  }
   .classify-bar {
     position: relative;
     top: -100px;

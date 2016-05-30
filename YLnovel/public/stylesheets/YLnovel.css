@@ -392,22 +392,16 @@ li {
     text-align: center;
     line-height: 40px;
     font-size: 14px; }
-    .create-page .btn .add-img a {
-      position: relative;
-      color: #ffffff;
-      border-radius: 4px;
-      overflow: hidden;
-      display: inline-block;
-      *display: inline;
-      *zoom: 1; }
-    .create-page .btn .add-img .a-upload input {
-      position: absolute;
-      font-size: 100px;
-      right: 0;
-      top: 0;
+    .create-page .btn .add-img form label {
+      color: #ffffff; }
+    .create-page .btn .add-img form input {
+      width: 1px; }
+    .create-page .btn .add-img form input[type="file"] {
+      height: 20px;
+      background: #24C1EF;
+      -webkit-appearance: none;
       opacity: 0;
-      filter: alpha(opacity=0);
-      cursor: pointer; }
+      filter: alpha(opacity=0); }
   .create-page .btn .save-draft {
     border-right: 1px solid #E6E6E6; }
   .create-page .btn .choose-classify, .create-page .btn .save-draft {
@@ -433,6 +427,8 @@ li {
     width: 120px;
     height: 90px;
     margin: 10px auto 0 auto; }
+.create-page .classify-bar-border {
+  border: 1px solid #D5491E !important; }
 .create-page .classify-bar {
   position: relative;
   top: -100px;

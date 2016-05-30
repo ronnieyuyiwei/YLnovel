@@ -1,4 +1,5 @@
 var dbConnect = require("./dbConnect");
+var username = "登录";
 function set_Username(_username) {
     username = _username;
 }
@@ -19,6 +20,7 @@ var register = function (id, password, res) {
                     console.log(err);
                 } else {
                     console.log("注册成功")
+
                 }
             })
         } else {
@@ -38,16 +40,14 @@ var login = function (id, password, req, res) {
             dbConnect.cnt.query('select password from user where id ="' + id + '"', function (err, result) {
                 if (result[0].password == password) {
                     console.log("成功" + id);
-                    set_Username(id)
+                    set_Username(id);
                 }
             })
         }
-
-
     })
 };
 //
-var username = "登录";
+
 exports.register = register;
 exports.login = login;
 //exports.results = results;
