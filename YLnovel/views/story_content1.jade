@@ -1,0 +1,48 @@
+//
+   Created by Yu Yiwei on 2016/5/23.
+extends includes/layout
+block append pagescript
+    script(src ="./javascripts/refresh.js")
+    script.
+        var h = document.body.clientHeight;
+        $(function () {
+            $(".story-summary").css("height", h-125);
+            $("#next").click(function(){
+                $(".summary-content .content.active").removeClass("active").next(".content").addClass("active");
+            })
+            $("#up").click(function () {
+                $(".summary-content .content.active").removeClass("active").prev(".content").addClass("active");
+            })
+        })
+
+block content
+    .story-details
+        .head-background
+            img.bg(src="/images/icons/recommend-2.jpg")
+            .story-info
+                img.cover(src="/images/icons/recommend-2.jpg")
+                .word
+                    .title #{story_title}
+                    .info
+                        label 关注：#{focus}
+                        label 分支：#{branch}
+                        label 赞：#{zan}
+                    .author
+                        label 作者：#{author}
+                    .focus-btn
+                        img(src="images/icons/focus-btn.png")
+            .back-btn
+                img(src="./images/icons/white-back.png",onclick="history.go(-1)")
+        .story-summary
+            .title(style="margin-top:40px") #{story_title}
+            .summary-content(style="font-size:15px")
+                .content.active #{story_content1}
+                .content #{story_content2}
+                .content #{story_content3}
+            .next-btn
+                .btn#up    上一页
+                .btn#next    下一页
+                //.btn    评论
+                //.btn    续写
+                .clearfix
+        include includes/bottom-menu

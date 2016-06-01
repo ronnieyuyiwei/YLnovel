@@ -1,0 +1,17 @@
+//
+   Created by Yu Yiwei on 2016/5/30.
+extends includes/layout
+
+block append pagescript
+    script.
+        var h = document.body.clientHeight;
+        $(function(){
+            $(".success-container").css("height",h);
+        })
+block content
+    .success-container
+        img(src="images/icons/success.png")
+        .label 成功
+    include includes/bottom-menu
+
+

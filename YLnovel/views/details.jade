@@ -1,6 +1,8 @@
 //
    Created by Yu Yiwei on 2016/5/23.
 extends includes/layout
+block append pagescript
+    script(src ="./javascripts/refresh.js")
 block content
     .story-details
         .head-background
@@ -8,51 +10,36 @@ block content
             .story-info
                 img.cover(src="/images/icons/recommend-2.jpg")
                 .word
-                    .title 钢琴舞斗家
+                    .title #{story_title}
                     .info
-                        label 关注：1234
-                        label 分支：3
-                        label 赞：324
+                        label 关注：#{focus}
+                        label 分支：#{branch}
+                        label 赞：#{zan}
                     .author
-                        label 作者：晓晓
+                        label 作者：#{author}
                     .focus-btn
                         img(src="images/icons/focus-btn.png")
             .back-btn
-                img(src="./images/icons/white-back.png")
+                img(src="./images/icons/white-back.png",onclick="history.go(-1)")
         .branch-list
             .recommend-branch
                 .title 推荐分支
-                .branch 1
-                .branch 2
-                .branch 3
-                .branch 5
-                .clearfix
-            .hot-branch
-                .title 热门分支
-                .branch 1
-                .branch 2
-                .branch 3
-                .branch 5
+                .branch(onclick="javascript:window.location.href='/story_content1'") 主分支
                 .clearfix
         .story-summary
             .title 简介
-            .summary-content 他1999年起在北京现代音乐学院担任钢琴教师，十几年来培养众多中国学生，“中国学生不缺技巧，但是应该学会寻找音乐中的快乐。 ”“很多中国学生都追求‘快’，以为快就是高手。意大利学生更重视音色和感觉，最后才是技术。只要勤奋就能快，但感觉不是谁都能找得到的。 ”他非常喜欢李云迪，“他很有音乐的感觉。 ”
+            .summary-content #{summary}
         .comments-container
             .title
-                label 评论(3)
+                label 评论
             .comments
                 .comments-content
                     .content
                         .head-img
-                            img(src="/images/icons/customer.png")
+                            img(src="/images/icons/customer.png" )
                         .info
-                            .user-info 西飞白日
-                            .comments-info 他1999年起在北京现代音乐学院担任钢琴教师，十几年来培养众多他1999年起在北京现代音乐学院担任钢琴教师，十几年来培养众多
+                            .user-info(contentEditable=true) 输入评论
+                            .comments-info(contentEditable=true) 评论内容
                             .clearfix
-                    .content
-                        .head-img
-                            img(src="/images/icons/customer.png")
-                        .info
-                            .user-info 西飞白日
-                            .comments-info 他1999年起在北京现代音乐学院担任钢琴教师，十几年来培养众多他1999年起在北京现代音乐学院担任钢琴教师，十几年来培养众多
-                            .clearfix
+
+        include includes/bottom-menu

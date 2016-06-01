@@ -1,0 +1,39 @@
+//
+   Created by Yu Yiwei on 2016/5/30.
+//
+   Created by Yu Yiwei on 2016/5/15.
+extends includes/layout
+block append pagescript
+    script.
+        var h = document.body.clientHeight;
+        var funHeight = h - 190;//180高度 10padding
+        $(function(){
+            $(".function").css("height",funHeight);
+        })
+
+block content
+    .login-panel
+        .login-btn
+            a(href="/login")
+                img(src="/images/icons/login.png")
+        .label #{username}
+    .function
+        .my-message
+            img.icon(src="/images/icons/sex.png")
+            label 性别
+            label
+                input(type="radio",name="sex",value="1")
+                |男
+            label
+                input(type="radio",name="sex",value="0")
+                |女
+        .my-works
+            img.icon(src="/images/icons/message.png")
+            label 邮箱
+            input(type="text")
+
+
+    include includes/bottom-menu
+
+
+

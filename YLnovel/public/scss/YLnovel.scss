@@ -155,7 +155,7 @@ li {
           float: left;
           margin-top: 11px;
           margin-left: 10px;
-          width: 180px;
+          width: 160px;
           color: $font-color;
           font-size: 16px;
           font-weight: 500;
@@ -165,7 +165,7 @@ li {
         .author {
           float: right;
           margin-top: 10px;
-          width: 110px;
+          width: 130px;
 
           img {
             width: 25px;
@@ -176,7 +176,7 @@ li {
             top: -5px;
             display: inline-block;
             margin-left: 5px;
-            width: 75px;
+            width: 95px;
             color: $light-gray;
             font-size: 14px;
             overflow: hidden;
@@ -306,6 +306,16 @@ li {
     margin-top: 10px;
     height: 40px;
     background: #ffffff;
+    //因毕业设计原因，此处临时插入用户信息设置代码
+    input{
+      border:none;
+      height: 30px;
+      margin-left: 15px;
+      position: relative;
+      top: -12px;
+      width:60%;
+      padding-left:15px;
+    }
   }
   .my-focus {
     //border-top: 1px solid $bg-color;
@@ -711,8 +721,9 @@ li {
         }
         .focus-btn {
           width: 35px;
-          float: right;
-          margin-top: -10px;
+         position: absolute;
+          top: 50px;
+         right: 45px;
           img {
             width: 25px;
             height: 25px;
@@ -739,7 +750,7 @@ li {
   }
   //分支
   .branch-list{
-    height: 180px;
+    height: 130px;
     background: $light-bg-color;
     .recommend-branch{
       padding: 30px 0 0 15px;
@@ -787,7 +798,7 @@ li {
   }
   //简介
   .story-summary{
-    height: 160px;
+    height: 200px;
     border-top: 1px solid #ffffff;
     background: $light-bg-color;
     padding: 10px 13px 0 13px;
@@ -802,6 +813,34 @@ li {
       color: $light-gray;
       font-size: 13px;
       text-indent: 30px;
+    .content{
+      display: none;
+    }
+      .content.active{
+        display: block;
+
+      }
+
+    }
+    //临时插入
+    .next-btn{
+      width:100%;
+      position: absolute;
+      bottom: 75px;
+      .btn{
+        height: 40px;
+        width: 160px;
+        text-align: center;
+        margin:0 auto;
+
+        background: $main-color;
+        color: #ffffff;
+        line-height: 40px;
+        font-weight: 600;
+        float: left;
+        margin-right:13px;
+      }
+
     }
   }
   //评论
@@ -842,6 +881,71 @@ li {
             }
           }
         }
+      }
+    }
+  }
+}
+
+//成功页面
+.success-container{
+  background: #F0F0F0;
+  text-align: center;
+  img{
+    margin-top: 200px;
+    width: 120px;
+  }
+  .label{
+    margin-top: 15px;
+    text-space: 15px;
+
+  }
+}
+.product_list{
+  background: $bg-color;
+  .head{
+    background: $main-color;
+    height:45px;
+    color: #ffffff;
+    line-height: 45px;
+    text-align: center;
+    font-weight: 600;
+  }
+  .list{
+    background: #ffffff;
+    margin-top: 10px;
+    .story-container{
+      .title{
+        margin-bottom: 10px;
+      }
+      padding: 10px 0 10px 0;
+      border-bottom: 1px solid $light-gray;
+      .title{
+        margin-left: 10px;
+      }
+      .zan{
+        float: left;
+        width:15%;
+        min-width: 30px;
+        max-width: 55px;
+        text-align: center;
+        height: 60px;
+        img{
+          margin-top: -5px;
+          width: 25px;;
+        }
+        label{
+          display: block;
+        }
+      }
+      .content{
+        font-size: 13px;
+        float: left;
+        width:82%;
+        height: 61px;
+        overflow: hidden;
+        color: #000;
+
+        padding-right: 10px;
       }
     }
   }

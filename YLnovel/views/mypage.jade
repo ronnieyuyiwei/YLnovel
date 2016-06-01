@@ -8,6 +8,11 @@ block append pagescript
         $(function(){
             $(".function").css("height",funHeight);
         })
+        $(function(){
+            $(".my-message").click(function(){window.location.href="/basic-info"})
+            $(".my-works").click(function(){window.location.href="/product_list"})
+
+        })
 
 block content
     .login-panel
@@ -18,7 +23,7 @@ block content
     .function
         .my-message
             img.icon(src="/images/icons/message.png")
-            label 我的消息
+            label 我的信息
             img.arrow(src="/images/icons/right.png")
         .my-works
             img.icon(src="/images/icons/works.png")

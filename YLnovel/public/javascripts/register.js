@@ -36,7 +36,10 @@ $(function (){
                 url:"/login",
                 data: {id:id,password:password},
                 success: function(test){
-                   console.log("login ajax 返回"+Test)
+                   window.location.href="/mypage"
+                },
+                error:function(){
+                    alert("用户名密码错误")
                 }
             })
-})})
+})});

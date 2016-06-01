@@ -1,11 +1,11 @@
 extends includes/layout
-
+block append pagescript
+    script(src ="./javascripts/refresh.js")
 block content
   .body-container
     .front-head
       .title 首页
-      .search
-        img(src="/images/icons/search.png")
+
     .classify
         a(href="")
             img(src="/images/icons/classify-science.png")
@@ -48,66 +48,29 @@ block content
                 img(src="/images/icons/recommend-3.jpg")
                 label 九尾妖狐
     .story-container
-      .story
-        .info-bar
-          .category-label.label-science 科幻
-          .title 最终进化
-          .author
-            img(src="/images/icons/author.png")
-            label 木子木子
-        .content
-            img(src="/images/photos/science.jpg")
-        .sub-info-bar
-          .sub-title 现实主义的虚空
-          .comments
-            span.comments
-              label
-                  img(src="/images/icons/comments.png")
-              label.num 3456
-            span.zan
-              label
-                  img(src="/images/icons/zan.png")
-              label.num 12345
-      .story
-          .info-bar
+        each val in story
+          .story
+            .info-bar
               .category-label.label-science 科幻
-              .title 最终进化
+              .title #{val.name}
               .author
-                  img(src="/images/icons/author.png")
-                  label 木子木子
-          .content
-              img(src="/images/photos/science.jpg")
-          .sub-info-bar
-              .sub-title 现实主义的虚空
+                img(src="/images/icons/author.png" )
+                label 13621684786
+            .content
+                a(href="/details")
+                    img(src="/images/icons/recommend-2.jpg")
+            .sub-info-bar
+              .sub-title #{src}
               .comments
-                  span.comments
-                      label
-                          img(src="/images/icons/comments.png")
-                      label.num 3456
-                  span.zan
-                      label
-                          img(src="/images/icons/zan.png")
-                      label.num 12345
-      .story
-          .info-bar
-              .category-label.label-science 科幻
-              .title 最终进化
-              .author
-                  img(src="/images/icons/author.png")
-                  label 木子木子
-          .content
-              img(src="/images/photos/science.jpg")
-          .sub-info-bar
-              .sub-title 现实主义的虚空
-              .comments
-                  span.comments
-                      label
-                          img(src="/images/icons/comments.png")
-                      label.num 3456
-                  span.zan
-                      label
-                          img(src="/images/icons/zan.png")
-                      label.num 12345
+                span.comments
+                  label
+                      img(src="/images/icons/comments.png")
+                  label.num #{val.comments}
+                span.zan
+                  label
+                      img(src="/images/icons/zan.png")
+                  label.num #{val.zan}
+
 
 
     include includes/bottom-menu

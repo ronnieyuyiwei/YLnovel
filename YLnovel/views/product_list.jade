@@ -1,0 +1,24 @@
+//
+   Created by Yu Yiwei on 2016/5/30.
+
+extends includes/layout
+block append pagescript
+    script(src = "/javascripts/refresh.js")
+    script.
+        $(function(){
+            $("#con").click(function(){
+                window.location.href = "/details"
+            })
+        })
+
+block content
+    .product_list
+        .head 故事详情
+        .list
+            .story-container
+                .title #{story_title}
+                .zan
+                    img(src="./images/icons/focus-btn.png")
+                    label #{zan_num}
+                .content#con #{summary}
+                .clearfix

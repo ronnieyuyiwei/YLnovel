@@ -13,25 +13,25 @@ block append pagescript
                 $(this).siblings().removeClass("classify-bar-border");
             })
 
-        $(".btn-commit").click(function(){
+            $(".btn-commit").click(function(){
 
-            var title = $("input.title").val();
-            var summary = $("textarea.brief-introduction").val();
-            var story_content = $("textarea.story-content").val();
-            var classify = $(".theme.classify-bar-border").data("class");
-            $.ajax({
-                type:"post",
-                dataType:"text",
-                url:"/create-story",
-                data:{ title:title,summary:summary,story_content:story_content,classify:classify},
-                success:function(){
-                    alert("上传成功")
-                }
+                var title = $("input.title").val();
+                var summary = $("textarea.brief-introduction").val();
+                var story_content = $("textarea.story-content").val();
+                var classify = $(".theme.classify-bar-border").data("class");
+                $.ajax({
+                    type:"post",
+                    dataType:"text",
+                    url:"/create-story2",
+                    data:{ title:title,summary:summary,story_content:story_content,classify:classify},
+                    success:function(){
+                        alert("上传成功")
+                    }
 
+                })
+
+                $("form.a-upload").submit();
             })
-
-            $("form.a-upload").submit();
-        })
 
         })
 
@@ -59,8 +59,8 @@ block content
                 //    input(name='btnUp', type='submit',value='上传封面图片',id="submit-btn")
 
                 form(method='post', class="a-upload",action='/create-story', enctype='multipart/form-data')
-                      input#doc(name='inputFile' type="file",multiple="multiple",onchange="javascript:setImagePreview();")
-                      label 上传封面图片
+                    input#doc(name='inputFile' type="file",multiple="multiple",onchange="javascript:setImagePreview();")
+                    label 上传封面图片
             .choose-classify
                 img(src="/images/icons/choose-theme.png")
                 label 选择分类

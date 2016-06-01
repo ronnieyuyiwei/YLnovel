@@ -1,8 +1,6 @@
 //
    Created by Yu Yiwei on 2016/5/30.
-
-extends includes/layout
-block content
-    form(method='post', action='/upload', enctype='multipart/form-data')
-        input(name='inputFile', type='file', multiple='multiple')
-        input(name='btnUp', type='submit',value='上传')
+.hello(style="background:red;height:60px")
+    ul
+        each val,index in ["1","2","3"]
+            li= index + ':' + val
