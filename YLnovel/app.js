@@ -69,9 +69,6 @@ app.post('/login', function (req, res) {
     console.log("session" + req.session.username);
     var test = "成功";
     res.send(test);
-
-
-
 });
 
 
@@ -105,6 +102,7 @@ app.post('/create-story', function (req, res) {
             var inputFile = files.inputFile[0];
             var uploadedPath = inputFile.path;
             var dstPath = './public/images/photos' + inputFile.originalFilename;
+
             //重命名为真实文件名
             //var dstPath = './public/images/' + req.body.filename;
             fs.rename(uploadedPath, dstPath, function (err) {
